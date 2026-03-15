@@ -3,15 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <title>SAMUEL NICHOLSON 666</title>
+    <style>
+      /* SCHERMATA DI INGRESSO MODIFICATA */
+        #splash-screen {
+            position: fixed;
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%;
+            
+            /* QUI AGGIUNGIAMO LA TUA FACCIA COME SFONDO */
+            background-image: url('pre.jpg');
+            background-size: cover; /* Copre tutto lo schermo senza deformarsi */
+            background-position: center; /* Centra la faccia */
+            background-color: black; /* Sfondo nero se l'immagine non carica */
+            
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+            flex-direction: column;
+            z-index: 9999;
+            cursor: pointer;
+            
+            /* Un filtro per renderla ancora più scura/horror (opzionale) */
+            filter: contrast(120%) brightness(80%);
+        }
+
+        body {
+            background-image: url('sfondo.jpg');
+            background-color: black;
+            background-attachment: fixed;
+            color: white;
+            font-family: serif;
+            text-align: center;
+            margin: 0; padding: 20px;
+        }
+
+        h1 { color: red; font-size: 60px; letter-spacing: 15px; margin-bottom: 50px; }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section-box {
+            border: 1px solid #444;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .section-title {
+            border-bottom: 1px solid #444;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            letter-spacing: 5px;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        img, video { max-width: 100%; border: 1px solid #333; }
+        a { color: red; text-decoration: none; font-weight: bold; }
+    </style>
 </head>
-<body style="background-color:black; color:red; font-family:serif; text-align:center; cursor:crosshair;">
-    <h1 style="font-size:50px; margin-top:100px;">BENVENUTI NELLA GROTTA</h1>
-    <h2 style="color:white; letter-spacing:10px;">SAMUEL NICHOLSON 666</h2>
-    <br>
-    <img src="https://web.archive.org/web/20090830050510/http://geocities.com/Hollywood/Hills/1083/skullani.gif" width="150">
-    <br><br>
-    <p style="font-size:25px; color:white;">IL CENTIPEDE TI STA OSSERVANDO</p>
-    <br>
-    <a href="mailto:nicolosisamuele23@gmail.com" style="color:blue; font-size:20px;">INVIA LA TUA ANIMA QUI</a>
+<body>
+
+    <div id="splash-screen" onclick="this.style.display='none'">
+        <h2 style="color:red; letter-spacing:10px; margin-top:300px; text-shadow: 2px 2px 5px black;">TOPO GIGIO EXPERIENCE</h2>
+        <p style="color:white; font-size:12px; text-shadow: 1px 1px 3px black;">CLICCA PER ENTRARE</p>
+    </div>
+
+    <h1></h1>
+    ```
+    <div class="grid-container">
+        
+       <div class="section-box">
+            <div class="section-title">topo gigio</div>
+            
+            <img src="foto1.jpg" style="margin-bottom: 15px; border: 1px solid #444;">
+            
+            <img src="foto2.jpg" style="margin-bottom: 15px; border: 1px solid #444;">
+            
+            <p style="font-size: 14px; color: gray; font-style: italic;"></p>
+        </div>
+
+        <div class="section-box">
+            <div class="section-title">TOPO GIGIO</div>
+            <video autoplay loop muted playsinline style="width: 100%;">
+                <source src="loop.mp4" type="video/mp4">
+            </video>
+            <br><br>
+            <audio controls style="width: 100%; filter: invert(100%);">
+                <source src="topogigio.wav" type="audio/wav">
+            </audio>
+            <p style="font-size: 12px; color: #888;">TRACK: TOPOGIGIO.WAV</p>
+            <a href="topogigio.wav" download>[ DOWNLOAD EXPERIMENT ]</a>
+        </div>
+
+    </div>
+
 </body>
 </html>
